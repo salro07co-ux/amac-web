@@ -1,0 +1,216 @@
+/* =========================================================
+   layout.css
+   Encabezado, franja de ayuda, contenedor, rejillas y pie de página.
+   Mobile-first: lo de arriba es para celular; las media queries
+   agregan cambios para tablet (48em = 768px) y escritorio (64em = 1024px).
+   ========================================================= */
+
+/* El fondo de cada franja ocupa todo el ancho; el contenido no pasa de 1440px */
+.contenedor {
+  width: 100%;
+  max-width: var(--ancho-maximo);
+  margin-inline: auto;
+}
+
+/* ---------- Encabezado ---------- */
+.encabezado .contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espacio-s);
+  padding: var(--espacio-m);
+}
+
+.logo {
+  flex: 0 1 13.75rem;   /* 220px, se encoge en pantallas muy angostas */
+  min-width: 8rem;
+  height: 4.625rem;     /* 74px */
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.encabezado .encabezado__cuenta {
+  width: 6.25rem;       /* 100px */
+}
+
+/* En celular la navegación baja a su propia fila */
+.navegacion {
+  display: flex;
+  gap: var(--espacio-s);
+  width: 100%;
+}
+
+.navegacion .boton {
+  flex: 1;
+  width: auto;
+}
+
+/* ---------- Franja de ayuda / llamar a AMAC ---------- */
+.ayuda {
+  display: block;
+  background: var(--color-cielo);
+  text-decoration: none;
+}
+
+.ayuda .contenedor {
+  padding: var(--espacio-s) var(--espacio-m);
+  text-align: center;
+}
+
+.ayuda:hover span {
+  text-decoration: underline;
+}
+
+/* ---------- Contenido principal ---------- */
+.contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--espacio-l);
+  padding: var(--espacio-m);
+}
+
+.contenido > * {
+  width: 100%;
+}
+
+/* ---------- Rejillas ---------- */
+.lista-vacantes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espacio-l);
+}
+
+.fila-campos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espacio-m);
+}
+
+.busqueda {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espacio-m);
+}
+
+/* Horario y Categoría lado a lado desde celular */
+.busqueda__filtros {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--espacio-s);
+  align-items: end;
+}
+
+/* ---------- Pie de página ---------- */
+.pie {
+  background: var(--color-navy);
+  color: var(--color-blanco);
+}
+
+.pie .contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--espacio-s);
+  padding: var(--espacio-m);
+}
+
+.pie__lema {
+  font-family: var(--fuente-titulos);
+  font-size: var(--texto-h2);
+  line-height: var(--interlineado-h2);
+}
+
+/* El foco en fondo oscuro se ve en blanco */
+.pie :focus-visible {
+  outline-color: var(--color-blanco);
+}
+
+/* ---------- Mostrar solo en un tamaño ---------- */
+.solo-escritorio {
+  display: none !important;
+}
+
+/* =========================================================
+   TABLET (768px en adelante)
+   ========================================================= */
+@media (min-width: 48em) {
+  .encabezado .contenedor {
+    padding: var(--espacio-l);
+  }
+
+  .ayuda .contenedor {
+    padding-inline: var(--espacio-l);
+    text-align: left;
+  }
+
+  .contenido {
+    padding: var(--espacio-xl) var(--espacio-l);
+  }
+
+  .lista-vacantes,
+  .fila-campos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pie .contenedor {
+    padding: var(--espacio-xl) var(--espacio-l);
+  }
+}
+
+/* =========================================================
+   ESCRITORIO (1024px en adelante)
+   ========================================================= */
+@media (min-width: 64em) {
+  .solo-escritorio {
+    display: flex !important;
+  }
+
+  .solo-movil {
+    display: none !important;
+  }
+
+  /* Logo a la izquierda y navegación a la derecha */
+  .encabezado .contenedor {
+    flex-wrap: nowrap;
+    gap: var(--espacio-l);
+    padding: var(--espacio-l) 4.5rem;   /* 72px */
+  }
+
+  .navegacion {
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  .navegacion .boton {
+    flex: none;
+    padding-inline: var(--espacio-l);
+  }
+
+  .ayuda .contenedor {
+    padding-inline: var(--espacio-pagina);
+  }
+
+  .contenido {
+    padding: var(--espacio-xxl) var(--espacio-pagina);
+  }
+
+  /* Buscador: 528px + 300px + 300px como en Figma, y se encoge si no cabe */
+  .busqueda {
+    grid-template-columns: minmax(0, 33rem) minmax(0, 18.75rem) minmax(0, 18.75rem);
+  }
+
+  .busqueda__filtros {
+    display: contents;
+  }
+
+  .pie .contenedor {
+    padding: var(--espacio-xl);
+  }
+}

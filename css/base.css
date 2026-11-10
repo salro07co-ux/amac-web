@@ -1,0 +1,111 @@
+/* =========================================================
+   base.css
+   Reset, cuerpo, tipografía, enlaces y foco visible.
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-blanco);
+  color: var(--color-navy);
+  font-family: var(--fuente-texto);
+  font-size: var(--texto-base);
+  line-height: var(--interlineado-base);
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+dl,
+dd,
+fieldset {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fuente-titulos);
+  font-weight: 400;
+}
+
+h1 {
+  font-size: var(--texto-h1);
+  line-height: var(--interlineado-h1);
+}
+
+h2 {
+  font-size: var(--texto-h2);
+  line-height: var(--interlineado-h2);
+}
+
+h3 {
+  font-size: var(--texto-tarjeta);
+  line-height: var(--interlineado-tarjeta);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+strong,
+.negrita {
+  font-weight: 700;
+}
+
+/* Foco visible al navegar con Tab: se reemplaza el contorno, no se elimina */
+:focus-visible {
+  outline: 3px solid var(--color-navy);
+  outline-offset: 3px;
+}
+
+/* Enlace para saltar directo al contenido con el teclado */
+.saltar-contenido {
+  position: absolute;
+  left: -9999px;
+  z-index: 10;
+  padding: var(--espacio-s) var(--espacio-m);
+  background: var(--color-navy);
+  color: var(--color-blanco);
+  font-weight: 700;
+  border-radius: var(--radio);
+}
+
+.saltar-contenido:focus {
+  left: var(--espacio-m);
+  top: var(--espacio-m);
+}
+
+/* Texto solo para lectores de pantalla */
+.solo-lector {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (min-width: 48em) {
+  h1 {
+    font-size: 2.25rem;     /* 36px · AMAC/title */
+    line-height: 3rem;      /* 48px */
+  }
+}
