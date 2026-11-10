@@ -1,0 +1,269 @@
+/* =========================================================
+   componentes.css
+   Piezas reutilizables. Cada una será un componente de React
+   en la Entrega 3 (ver la lista en el README).
+   ========================================================= */
+
+/* ---------- Botón  →  <Boton /> ---------- */
+.boton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: var(--alto-control);
+  padding: var(--espacio-s);
+  border: 1.5px solid var(--color-navy);
+  border-radius: var(--radio);
+  background: var(--color-blanco);
+  color: var(--color-navy);
+  font-family: var(--fuente-texto);
+  font-size: var(--texto-base);
+  font-weight: 700;
+  line-height: var(--interlineado-base);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton--primario {
+  background: var(--color-coral);
+  border-color: var(--color-coral);
+}
+
+/* Secundario: fondo blanco con borde (estilo base) */
+.boton--secundario {
+  background: var(--color-blanco);
+}
+
+/* Acción destructiva (cancelar, cerrar vacante) */
+.boton--peligro {
+  background: var(--color-blanco);
+}
+
+.boton--inactivo {
+  background: var(--color-gris);
+  border-color: var(--color-gris);
+  cursor: not-allowed;
+}
+
+.boton:hover:not(.boton--inactivo) {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media (min-width: 48em) {
+  .boton {
+    width: var(--ancho-boton);
+    max-width: 100%;
+  }
+
+  .boton--corto {
+    width: 17.5rem;    /* 280px */
+  }
+
+  .boton--mediano {
+    width: 18.75rem;   /* 300px */
+  }
+
+  .boton--largo {
+    width: 22.5rem;    /* 360px */
+  }
+
+  /* En la tarjeta de vacante el botón ocupa todo el ancho */
+  .tarjeta-vacante .boton {
+    width: 100%;
+  }
+}
+
+/* ---------- Grupo de botones  →  <GrupoAcciones /> ---------- */
+.grupo-acciones {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-s);
+}
+
+@media (min-width: 48em) {
+  .grupo-acciones {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+/* ---------- Tarjeta  →  <Tarjeta /> ---------- */
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--espacio-m);
+  padding: var(--espacio-l);
+  background: var(--color-blanco);
+  border: 1px solid var(--color-gris);
+  border-radius: var(--radio);
+}
+
+/* Todo ocupa el ancho de la tarjeta, menos botones y etiquetas */
+.tarjeta > :not(.boton, .etiqueta-estatus) {
+  width: 100%;
+}
+
+/* Aviso informativo (azul): cambio guardado, solicitud enviada */
+.tarjeta--aviso {
+  background: var(--color-cielo);
+}
+
+/* Aviso de atención (arena): cuenta en revisión, vacante pausada */
+.tarjeta--alerta {
+  background: var(--color-arena);
+}
+
+/* Título dentro de una tarjeta (puede ser h2 o h3 según la página) */
+.tarjeta__titulo {
+  font-size: var(--texto-tarjeta);
+  line-height: var(--interlineado-tarjeta);
+}
+
+/* ---------- Tarjeta de vacante  →  <TarjetaVacante /> ---------- */
+.tarjeta-vacante {
+  gap: var(--espacio-s);
+}
+
+.tarjeta-vacante__horario,
+.tarjeta-vacante__empresa {
+  font-weight: 700;
+}
+
+/* ---------- Etiqueta de estatus  →  <EtiquetaEstatus /> ---------- */
+.etiqueta-estatus {
+  width: var(--ancho-etiqueta) !important;
+  max-width: 100%;
+  padding: var(--espacio-xs);
+  background: var(--color-cielo);
+  border-radius: var(--radio-etiqueta);
+  font-weight: 700;
+}
+
+/* Dentro de un aviso azul la etiqueta lleva borde para distinguirse */
+.tarjeta--aviso .etiqueta-estatus {
+  outline: 1px solid var(--color-navy);
+}
+
+/* ---------- Lista de datos (Sueldo, Ubicación...)  →  <ListaDatos /> ---------- */
+.lista-datos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-m);
+}
+
+.lista-datos div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-xs);
+}
+
+.lista-datos dt {
+  font-weight: 700;
+}
+
+/* ---------- Formulario y campos  →  <CampoFormulario /> ---------- */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-m);
+}
+
+.campo-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-xs);
+  min-width: 0;
+}
+
+.campo-formulario label {
+  font-weight: 700;
+}
+
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea {
+  width: 100%;
+  min-height: var(--alto-control);
+  padding: var(--espacio-s);
+  border: 1px solid var(--color-navy);
+  border-radius: var(--radio);
+  background: var(--color-blanco);
+  color: var(--color-navy);
+  font-family: var(--fuente-texto);
+  font-size: var(--texto-base);
+  line-height: var(--interlineado-base);
+}
+
+.campo-formulario input::placeholder {
+  color: #4c5468;   /* contraste 7.6:1 sobre blanco */
+}
+
+.campo-formulario textarea {
+  resize: vertical;
+}
+
+/* Lista desplegable con flecha propia */
+.campo-formulario select {
+  appearance: none;
+  padding-right: 2.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%23202945' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.875rem center;
+}
+
+/* Campo de archivo: el botón interno toma el estilo secundario */
+.campo-formulario input[type="file"] {
+  padding: var(--espacio-xs) var(--espacio-s);
+}
+
+.campo-formulario input[type="file"]::file-selector-button {
+  margin-right: var(--espacio-s);
+  padding: 0.25rem var(--espacio-s);
+  border: 1.5px solid var(--color-navy);
+  border-radius: var(--radio);
+  background: var(--color-blanco);
+  color: var(--color-navy);
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Grupo de campos con título (Datos de contacto, Dirección...) */
+.grupo-campos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-m);
+  min-width: 0;
+  padding: 0;
+  border: 0;
+}
+
+.grupo-campos legend {
+  float: left;      /* hace que el gap aplique también a la leyenda */
+  width: 100%;
+  padding: 0;
+  font-family: var(--fuente-titulos);
+  font-size: var(--texto-h2);
+  line-height: var(--interlineado-h2);
+}
+
+/* ---------- Casilla de aceptación  →  <Casilla /> ---------- */
+.casilla {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--espacio-s);
+  cursor: pointer;
+}
+
+.casilla input {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.125rem 0 0;
+  accent-color: var(--color-navy);
+  cursor: pointer;
+}
