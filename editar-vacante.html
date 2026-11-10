@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar vacante | AMAC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&amp;family=Work+Sans:wght@400;700&amp;display=swap">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+</head>
+<body>
+  <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+
+  <header class="encabezado">
+    <div class="contenedor">
+      <a class="logo" href="empresa-vacantes.html">
+        <img src="img/logo-amac.png" alt="AMAC, asociAMayores A.C. Ir al inicio" width="220" height="74">
+      </a>
+      <a class="boton boton--secundario encabezado__cuenta solo-movil" href="login.html">Salir</a>
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a class="boton boton--secundario" href="empresa-vacantes.html">Mis vacantes</a>
+        <a class="boton boton--secundario" href="solicitudes-recibidas.html">Solicitudes</a>
+        <a class="boton boton--secundario solo-escritorio" href="login.html">Cerrar sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <a class="ayuda" href="tel:81123456">
+    <p class="contenedor">
+      <span class="solo-escritorio">¿Necesitas ayuda? Llama a AMAC: 81 123 456</span>
+      <span class="solo-movil">Ayuda AMAC · Llamar al 81 123 456</span>
+    </p>
+  </a>
+
+  <main id="principal" class="contenedor contenido">
+    <a class="boton boton--secundario" href="empresa-vacantes.html">Volver a mis vacantes</a>
+    <h1>Publicar o editar vacante</h1>
+    <p>Completa la información del puesto. Los campos con * son obligatorios.</p>
+    <form class="tarjeta formulario" action="empresa-vacantes.html">
+      <div class="fila-campos">
+        <div class="campo-formulario">
+          <label for="puesto">Nombre del empleo *</label>
+          <input type="text" id="puesto" name="puesto" required value="Auxiliar de atención">
+        </div>
+        <div class="campo-formulario">
+          <label for="sueldo">Sueldo *</label>
+          <input type="text" id="sueldo" name="sueldo" required value="$8,500 al mes">
+        </div>
+      </div>
+      <div class="fila-campos">
+        <div class="campo-formulario">
+          <label for="ubicacion">Ubicación del puesto *</label>
+          <input type="text" id="ubicacion" name="ubicacion" required value="Centro, Monterrey">
+        </div>
+        <div class="campo-formulario">
+          <label for="horario">Horario *</label>
+          <select id="horario" name="horario" required>
+            <option value="">Elige una opción</option>
+            <option selected>Medio tiempo</option>
+            <option>Tiempo completo</option>
+            <option>Fin de semana</option>
+          </select>
+        </div>
+      </div>
+      <div class="fila-campos">
+        <div class="campo-formulario">
+          <label for="categoria">Categoría *</label>
+          <select id="categoria" name="categoria" required>
+            <option value="">Elige una opción</option>
+            <option selected>Atención al cliente</option>
+            <option>Administración</option>
+          </select>
+        </div>
+      </div>
+      <div class="campo-formulario">
+        <label for="descripcion">Descripción *</label>
+        <textarea id="descripcion" name="descripcion" required rows="2">Orientar a las personas que visitan la tienda y apoyar en atención.</textarea>
+      </div>
+      <div class="campo-formulario">
+        <label for="requisitos">Requisitos *</label>
+        <textarea id="requisitos" name="requisitos" required rows="2">Trato amable, comunicación y disposición para aprender.</textarea>
+      </div>
+      <div class="campo-formulario">
+        <label for="prestaciones">Prestaciones *</label>
+        <textarea id="prestaciones" name="prestaciones" required rows="2">Prestaciones de ley y capacitación.</textarea>
+      </div>
+      <div class="campo-formulario">
+        <label for="proceso">Proceso de selección *</label>
+        <textarea id="proceso" name="proceso" required rows="2">1. Revisión de solicitud&#10;2. Entrevista presencial</textarea>
+      </div>
+      <div class="campo-formulario">
+        <label for="canal">Canal de postulación *</label>
+        <select id="canal" name="canal" required>
+          <option value="">Elige una opción</option>
+          <option selected>Solo por la plataforma</option>
+          <option>Plataforma y teléfono</option>
+        </select>
+      </div>
+      <div class="campo-formulario">
+        <label for="telefono">Teléfono si habilitas llamadas</label>
+        <input type="tel" id="telefono" name="telefono" autocomplete="tel" placeholder="81 0000 0000">
+      </div>
+      <p>Si eliges “Plataforma y teléfono”, el número será obligatorio y se mostrará en la vacante.</p>
+      <button class="boton boton--primario boton--largo" type="submit">Guardar cambios</button>
+    </form>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p class="pie__lema">Envejecer es vivir.</p>
+      <p>AMAC · Bolsa de trabajo</p>
+      <a class="boton boton--secundario boton--mediano" href="index.html">Ver vacantes</a>
+    </div>
+  </footer>
+</body>
+</html>
