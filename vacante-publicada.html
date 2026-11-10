@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vacante publicada | AMAC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&amp;family=Work+Sans:wght@400;700&amp;display=swap">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+</head>
+<body>
+  <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+
+  <header class="encabezado">
+    <div class="contenedor">
+      <a class="logo" href="empresa-vacantes.html">
+        <img src="img/logo-amac.png" alt="AMAC, asociAMayores A.C. Ir al inicio" width="220" height="74">
+      </a>
+      <a class="boton boton--secundario encabezado__cuenta solo-movil" href="login.html">Salir</a>
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a class="boton boton--secundario" href="empresa-vacantes.html">Mis vacantes</a>
+        <a class="boton boton--secundario" href="solicitudes-recibidas.html">Solicitudes</a>
+        <a class="boton boton--secundario solo-escritorio" href="login.html">Cerrar sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <a class="ayuda" href="tel:81123456">
+    <p class="contenedor">
+      <span class="solo-escritorio">¿Necesitas ayuda? Llama a AMAC: 81 123 456</span>
+      <span class="solo-movil">Ayuda AMAC · Llamar al 81 123 456</span>
+    </p>
+  </a>
+
+  <main id="principal" class="contenedor contenido">
+    <h1>Vacantes de mi empresa</h1>
+    <p>Comercial del Norte · Empresa aprobada por AMAC</p>
+    <a class="boton boton--primario" href="publicar-vacante.html">Publicar vacante</a>
+    <div class="tarjeta tarjeta--aviso" role="status">
+      <p>La vacante fue publicada y ya puede consultarse en el listado.</p>
+    </div>
+    <article class="tarjeta">
+      <p class="etiqueta-estatus"><span class="solo-lector">Estatus: </span>Activa</p>
+      <h2 class="tarjeta__titulo">Auxiliar de atención</h2>
+      <p>Publicada: 26 de octubre de 2026<br>Solicitudes recibidas: 1</p>
+      <div class="grupo-acciones">
+        <a class="boton boton--primario" href="solicitudes-recibidas.html">Ver solicitudes</a>
+        <a class="boton boton--secundario" href="editar-vacante.html">Editar<span class="solo-lector">: Auxiliar de atención</span></a>
+      </div>
+      <div class="grupo-acciones">
+        <a class="boton boton--secundario" href="vacante-pausada.html">Pausar</a>
+        <a class="boton boton--peligro" href="confirmar-cierre.html">Cerrar vacante</a>
+      </div>
+    </article>
+    <article class="tarjeta">
+      <p class="etiqueta-estatus"><span class="solo-lector">Estatus: </span>Activa</p>
+      <h2 class="tarjeta__titulo">Recepcionista</h2>
+      <p>Publicada: 26 de octubre de 2026<br>Solicitudes recibidas: 0</p>
+      <a class="boton boton--secundario boton--mediano" href="editar-vacante.html">Editar<span class="solo-lector">: Recepcionista</span></a>
+    </article>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p class="pie__lema">Envejecer es vivir.</p>
+      <p>AMAC · Bolsa de trabajo</p>
+      <a class="boton boton--secundario boton--mediano" href="index.html">Ver vacantes</a>
+    </div>
+  </footer>
+</body>
+</html>
