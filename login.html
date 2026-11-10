@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión | AMAC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&amp;family=Work+Sans:wght@400;700&amp;display=swap">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+</head>
+<body>
+  <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+
+  <header class="encabezado">
+    <div class="contenedor">
+      <a class="logo" href="index.html">
+        <img src="img/logo-amac.png" alt="AMAC, asociAMayores A.C. Ir al inicio" width="220" height="74">
+      </a>
+      <a class="boton boton--secundario encabezado__cuenta solo-movil" href="login.html">Entrar</a>
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a class="boton boton--secundario" href="index.html">Vacantes</a>
+        <a class="boton boton--secundario" href="mis-solicitudes.html">Mis solicitudes</a>
+        <a class="boton boton--secundario solo-escritorio" href="login.html" aria-current="page">Iniciar sesión</a>
+        <a class="boton boton--primario solo-escritorio" href="registro-candidato.html">Registrarme</a>
+      </nav>
+    </div>
+  </header>
+
+  <a class="ayuda" href="tel:81123456">
+    <p class="contenedor">
+      <span class="solo-escritorio">¿Necesitas ayuda? Llama a AMAC: 81 123 456</span>
+      <span class="solo-movil">Ayuda AMAC · Llamar al 81 123 456</span>
+    </p>
+  </a>
+
+  <main id="principal" class="contenedor contenido">
+    <h1>Iniciar sesión</h1>
+    <p>Entra con el correo y la contraseña de tu cuenta.</p>
+    <form class="tarjeta formulario" action="mis-solicitudes.html">
+      <div class="campo-formulario">
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" required autocomplete="email" value="candidato@ejemplo.test">
+      </div>
+      <div class="campo-formulario">
+        <label for="contrasena">Contraseña</label>
+        <input type="password" id="contrasena" name="contrasena" required autocomplete="current-password" value="contrasena">
+      </div>
+      <button class="boton boton--primario" type="submit">Iniciar sesión</button>
+      <p>¿Es tu primera vez? Crea una cuenta para postularte.</p>
+      <div class="grupo-acciones">
+        <a class="boton boton--secundario" href="registro-candidato.html">Crear cuenta</a>
+        <a class="boton boton--secundario" href="registro-empresa.html">Registrar empresa</a>
+      </div>
+    </form>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p class="pie__lema">Envejecer es vivir.</p>
+      <p>AMAC · Bolsa de trabajo</p>
+      <a class="boton boton--secundario boton--mediano" href="registro-empresa.html">Registro de empresa</a>
+    </div>
+  </footer>
+</body>
+</html>
