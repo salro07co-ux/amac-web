@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear cuenta de candidato | AMAC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&amp;family=Work+Sans:wght@400;700&amp;display=swap">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+</head>
+<body>
+  <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+
+  <header class="encabezado">
+    <div class="contenedor">
+      <a class="logo" href="index.html">
+        <img src="img/logo-amac.png" alt="AMAC, asociAMayores A.C. Ir al inicio" width="220" height="74">
+      </a>
+      <a class="boton boton--secundario encabezado__cuenta solo-movil" href="login.html">Entrar</a>
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a class="boton boton--secundario" href="index.html">Vacantes</a>
+        <a class="boton boton--secundario" href="mis-solicitudes.html">Mis solicitudes</a>
+        <a class="boton boton--secundario solo-escritorio" href="login.html">Iniciar sesión</a>
+        <a class="boton boton--primario solo-escritorio" href="registro-candidato.html" aria-current="page">Registrarme</a>
+      </nav>
+    </div>
+  </header>
+
+  <a class="ayuda" href="tel:81123456">
+    <p class="contenedor">
+      <span class="solo-escritorio">¿Necesitas ayuda? Llama a AMAC: 81 123 456</span>
+      <span class="solo-movil">Ayuda AMAC · Llamar al 81 123 456</span>
+    </p>
+  </a>
+
+  <main id="principal" class="contenedor contenido">
+    <h1>Crear cuenta de candidato</h1>
+    <p>Los campos con * son obligatorios. Puedes registrar correo, celular o ambos.</p>
+    <form class="tarjeta formulario" action="registro-pendiente.html">
+      <fieldset class="grupo-campos">
+        <legend>1. Datos de contacto</legend>
+        <div class="fila-campos">
+          <div class="campo-formulario">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" autocomplete="email" value="candidato@ejemplo.test">
+          </div>
+          <div class="campo-formulario">
+            <label for="celular">Celular</label>
+            <input type="tel" id="celular" name="celular" autocomplete="tel" value="81 0000 0000">
+          </div>
+        </div>
+        <div class="fila-campos">
+          <div class="campo-formulario">
+            <label for="contacto">Contacto preferido *</label>
+            <select id="contacto" name="contacto" required>
+              <option value="">Elige una opción</option>
+              <option selected>Correo electrónico</option>
+              <option>Celular</option>
+            </select>
+          </div>
+          <div class="campo-formulario">
+            <label for="contrasena">Contraseña *</label>
+            <input type="password" id="contrasena" name="contrasena" required autocomplete="new-password" value="contrasena">
+          </div>
+        </div>
+        <p>Se necesita al menos un medio de contacto válido. Si registras ambos, elige cuál prefieres.</p>
+      </fieldset>
+      <fieldset class="grupo-campos">
+        <legend>2. Datos personales</legend>
+        <div class="fila-campos">
+          <div class="campo-formulario">
+            <label for="nombre">Nombre(s) *</label>
+            <input type="text" id="nombre" name="nombre" required autocomplete="given-name" value="Carlos">
+          </div>
+          <div class="campo-formulario">
+            <label for="paterno">Apellido paterno *</label>
+            <input type="text" id="paterno" name="paterno" required autocomplete="family-name" value="Martínez">
+          </div>
+        </div>
+        <div class="fila-campos">
+          <div class="campo-formulario">
+            <label for="materno">Apellido materno *</label>
+            <input type="text" id="materno" name="materno" required value="López">
+          </div>
+          <div class="campo-formulario">
+            <label for="edad">Edad *</label>
+            <input type="number" id="edad" name="edad" required value="66">
+          </div>
+        </div>
+        <div class="fila-campos">
+          <div class="campo-formulario">
+            <label for="sexo">Sexo *</label>
+            <select id="sexo" name="sexo" required>
+              <option value="">Elige una opción</option>
+              <option>Femenino</option>
+              <option selected>Masculino</option>
+              <option>Prefiero no decirlo</option>
+            </select>
+          </div>
+          <div class="campo-formulario">
+            <label for="estudios">Máximo nivel de estudios *</label>
+            <select id="estudios" name="estudios" required>
+              <option value="">Elige una opción</option>
+              <option>Primaria</option>
+              <option>Secundaria</option>
+              <option selected>Preparatoria</option>
+              <option>Licenciatura</option>
+              <option>Posgrado</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="grupo-campos">
+        <legend>3. Dirección</legend>
+        <div class="fila-campos">
+          <div class="campo-formulario">
+            <label for="calle">Calle y número *</label>
+            <input type="text" id="calle" name="calle" required autocomplete="address-line1" value="Calle Ejemplo 123">
+          </div>
+          <div class="campo-formulario">
+            <label for="colonia">Colonia *</label>
+            <input type="text" id="colonia" name="colonia" required value="Centro">
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="grupo-campos">
+        <legend>4. Experiencia y habilidades</legend>
+        <div class="campo-formulario">
+          <label for="experiencia">Experiencia laboral</label>
+          <textarea id="experiencia" name="experiencia" rows="2">Atención al cliente y apoyo administrativo.</textarea>
+        </div>
+        <div class="campo-formulario">
+          <label for="habilidades">Habilidades</label>
+          <textarea id="habilidades" name="habilidades" rows="2">Comunicación, organización y uso básico de computadora.</textarea>
+        </div>
+        <div class="campo-formulario">
+          <label for="cv">Currículum (opcional)</label>
+          <input type="file" id="cv" name="cv">
+        </div>
+      </fieldset>
+      <fieldset class="grupo-campos">
+        <legend>5. Términos y privacidad</legend>
+        <div class="casilla">
+          <input type="checkbox" id="terminos" name="terminos" checked required>
+          <label for="terminos">Acepto los términos y condiciones.</label>
+        </div>
+        <div class="casilla">
+          <input type="checkbox" id="privacidad" name="privacidad" checked required>
+          <label for="privacidad">Acepto el aviso de privacidad.</label>
+        </div>
+        <p>Consulta los términos y el aviso de privacidad antes de aceptar.</p>
+      </fieldset>
+      <button class="boton boton--primario" type="submit">Crear cuenta</button>
+    </form>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p class="pie__lema">Envejecer es vivir.</p>
+      <p>AMAC · Bolsa de trabajo</p>
+      <a class="boton boton--secundario boton--mediano" href="registro-empresa.html">Registro de empresa</a>
+    </div>
+  </footer>
+</body>
+</html>
