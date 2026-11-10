@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estado actualizado | AMAC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&amp;family=Work+Sans:wght@400;700&amp;display=swap">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+</head>
+<body>
+  <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+
+  <header class="encabezado">
+    <div class="contenedor">
+      <a class="logo" href="empresa-vacantes.html">
+        <img src="img/logo-amac.png" alt="AMAC, asociAMayores A.C. Ir al inicio" width="220" height="74">
+      </a>
+      <a class="boton boton--secundario encabezado__cuenta solo-movil" href="login.html">Salir</a>
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a class="boton boton--secundario" href="empresa-vacantes.html">Mis vacantes</a>
+        <a class="boton boton--secundario" href="solicitudes-recibidas.html">Solicitudes</a>
+        <a class="boton boton--secundario solo-escritorio" href="login.html">Cerrar sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <a class="ayuda" href="tel:81123456">
+    <p class="contenedor">
+      <span class="solo-escritorio">¿Necesitas ayuda? Llama a AMAC: 81 123 456</span>
+      <span class="solo-movil">Ayuda AMAC · Llamar al 81 123 456</span>
+    </p>
+  </a>
+
+  <main id="principal" class="contenedor contenido">
+    <a class="boton boton--secundario" href="empresa-vacantes.html">Volver a mis vacantes</a>
+    <h1>Solicitudes recibidas</h1>
+    <p>Vacante: Auxiliar de atención · Comercial del Norte</p>
+    <div class="tarjeta tarjeta--aviso" role="status">
+      <p>El estado de la solicitud fue actualizado. El candidato verá el cambio en Mis solicitudes.</p>
+    </div>
+    <article class="tarjeta">
+      <h2 class="tarjeta__titulo">Carlos Martínez López</h2>
+      <p class="etiqueta-estatus"><span class="solo-lector">Estatus: </span>Aceptada</p>
+      <p>66 años · Centro, Monterrey</p>
+      <dl class="lista-datos">
+        <div>
+          <dt>Experiencia</dt>
+          <dd>Atención al cliente y apoyo administrativo.</dd>
+        </div>
+      </dl>
+      <a class="boton boton--secundario boton--corto" href="detalle-candidato.html">Ver candidato</a>
+      <div class="campo-formulario">
+        <label for="estado">Estado de la solicitud</label>
+        <select id="estado" name="estado">
+          <option>Pendiente</option>
+          <option selected>Aceptada</option>
+          <option>Rechazada</option>
+        </select>
+      </div>
+      <div class="grupo-acciones">
+        <a class="boton boton--primario" href="estado-actualizado.html">Aceptar solicitud</a>
+        <a class="boton boton--secundario" href="solicitud-rechazada.html">Rechazar solicitud</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p class="pie__lema">Envejecer es vivir.</p>
+      <p>AMAC · Bolsa de trabajo</p>
+      <a class="boton boton--secundario boton--mediano" href="index.html">Ver vacantes</a>
+    </div>
+  </footer>
+</body>
+</html>
