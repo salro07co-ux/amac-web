@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar empresa | AMAC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&amp;family=Work+Sans:wght@400;700&amp;display=swap">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+</head>
+<body>
+  <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+
+  <header class="encabezado">
+    <div class="contenedor">
+      <a class="logo" href="index.html">
+        <img src="img/logo-amac.png" alt="AMAC, asociAMayores A.C. Ir al inicio" width="220" height="74">
+      </a>
+      <a class="boton boton--secundario encabezado__cuenta solo-movil" href="login.html">Entrar</a>
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a class="boton boton--secundario" href="index.html">Vacantes</a>
+        <a class="boton boton--secundario" href="mis-solicitudes.html">Mis solicitudes</a>
+        <a class="boton boton--secundario solo-escritorio" href="login.html">Iniciar sesión</a>
+        <a class="boton boton--primario solo-escritorio" href="registro-candidato.html">Registrarme</a>
+      </nav>
+    </div>
+  </header>
+
+  <a class="ayuda" href="tel:81123456">
+    <p class="contenedor">
+      <span class="solo-escritorio">¿Necesitas ayuda? Llama a AMAC: 81 123 456</span>
+      <span class="solo-movil">Ayuda AMAC · Llamar al 81 123 456</span>
+    </p>
+  </a>
+
+  <main id="principal" class="contenedor contenido">
+    <h1>Registrar empresa</h1>
+    <p>Completa los datos para solicitar acceso a la bolsa de trabajo. Los campos con * son obligatorios.</p>
+    <form class="tarjeta formulario" action="registro-pendiente.html">
+      <fieldset class="grupo-campos">
+        <legend>1. Datos de la empresa</legend>
+        <div class="fila-campos">
+          <div class="campo-formulario">
+            <label for="empresa">Nombre de empresa *</label>
+            <input type="text" id="empresa" name="empresa" required autocomplete="organization" value="Comercial del Norte">
+          </div>
+          <div class="campo-formulario">
+            <label for="giro">Giro *</label>
+            <input type="text" id="giro" name="giro" required value="Comercio">
+          </div>
+        </div>
+        <div class="fila-campos">
+          <div class="campo-formulario">
+            <label for="rfc">RFC *</label>
+            <input type="text" id="rfc" name="rfc" required value="XAXX010101000">
+          </div>
+          <div class="campo-formulario">
+            <label for="telefono">Teléfono *</label>
+            <input type="tel" id="telefono" name="telefono" required autocomplete="tel" value="81 0000 0000">
+          </div>
+        </div>
+        <div class="fila-campos">
+          <div class="campo-formulario">
+            <label for="correo">Correo electrónico *</label>
+            <input type="email" id="correo" name="correo" required autocomplete="email" value="empresa@ejemplo.test">
+          </div>
+          <div class="campo-formulario">
+            <label for="contrasena">Contraseña *</label>
+            <input type="password" id="contrasena" name="contrasena" required autocomplete="new-password" value="contrasena">
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="grupo-campos">
+        <legend>2. Dirección</legend>
+        <div class="fila-campos">
+          <div class="campo-formulario">
+            <label for="calle">Calle y número *</label>
+            <input type="text" id="calle" name="calle" required autocomplete="address-line1" value="Calle Ejemplo 456">
+          </div>
+          <div class="campo-formulario">
+            <label for="colonia">Colonia *</label>
+            <input type="text" id="colonia" name="colonia" required value="Centro">
+          </div>
+        </div>
+        <div class="fila-campos">
+          <div class="campo-formulario">
+            <label for="cp">Código postal *</label>
+            <input type="text" id="cp" name="cp" required autocomplete="postal-code" value="64000">
+          </div>
+          <div class="campo-formulario">
+            <label for="municipio">Municipio o ciudad *</label>
+            <input type="text" id="municipio" name="municipio" required value="Monterrey">
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="grupo-campos">
+        <legend>3. Persona de contacto</legend>
+        <div class="fila-campos">
+          <div class="campo-formulario">
+            <label for="contacto-nombre">Nombre(s) *</label>
+            <input type="text" id="contacto-nombre" name="contacto_nombre" required value="Laura">
+          </div>
+          <div class="campo-formulario">
+            <label for="contacto-paterno">Apellido paterno *</label>
+            <input type="text" id="contacto-paterno" name="contacto_paterno" required value="García">
+          </div>
+        </div>
+        <div class="fila-campos">
+          <div class="campo-formulario">
+            <label for="contacto-materno">Apellido materno *</label>
+            <input type="text" id="contacto-materno" name="contacto_materno" required value="Pérez">
+          </div>
+          <div class="campo-formulario">
+            <label for="contacto-telefono">Teléfono de contacto *</label>
+            <input type="tel" id="contacto-telefono" name="contacto_telefono" required value="81 0000 0000">
+          </div>
+        </div>
+        <div class="fila-campos">
+          <div class="campo-formulario">
+            <label for="contacto-correo">Correo de contacto *</label>
+            <input type="email" id="contacto-correo" name="contacto_correo" required value="contacto@ejemplo.test">
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="grupo-campos">
+        <legend>4. Imagen de la empresa</legend>
+        <div class="fila-campos">
+          <div class="campo-formulario">
+            <label for="logo">Logo</label>
+            <input type="file" id="logo" name="logo">
+          </div>
+          <div class="campo-formulario">
+            <label for="banner">Banner</label>
+            <input type="file" id="banner" name="banner">
+          </div>
+        </div>
+      </fieldset>
+      <div class="casilla">
+        <input type="checkbox" id="terminos" name="terminos" checked required>
+        <label for="terminos">Acepto los términos y condiciones.</label>
+      </div>
+      <div class="casilla">
+        <input type="checkbox" id="privacidad" name="privacidad" checked required>
+        <label for="privacidad">Acepto el aviso de privacidad.</label>
+      </div>
+      <button class="boton boton--primario" type="submit">Enviar registro</button>
+    </form>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p class="pie__lema">Envejecer es vivir.</p>
+      <p>AMAC · Bolsa de trabajo</p>
+      <a class="boton boton--secundario boton--mediano" href="registro-empresa.html">Registro de empresa</a>
+    </div>
+  </footer>
+</body>
+</html>
